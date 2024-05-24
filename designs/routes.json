@@ -1,0 +1,60 @@
+{
+    "routes": [
+        {
+            "path": "sign-in",
+            "component": "signInComponent"
+        },
+        {
+            "path": "home",
+            "component": "homeComponent",
+            "children": [
+                {
+                    "path": "landing",
+                    "component": "landingComponent"
+                },
+                {
+                    "path": "Account Management",
+                    "component": "accountManagementComponent"
+                },
+                {
+                    "path": "Loan management",
+                    "component": "loanManagementComponent"
+                },
+                {
+                    "path": "Reports",
+                    "component": "ReportsComponent"
+                },
+                {
+                    "path": "Settings",
+                    "component": "SettingsComponent"
+                },
+                {
+                    "path": "Support",
+                    "component": "SupportComponent"
+                },
+                {
+                    "path": "Selected Account",
+                    "component": "selectedAccountComponent"
+                },
+                {
+                    "path": "Selected Loan",
+                    "component": "selectedLoanComponent"
+                }
+            ]
+        },
+        {
+            "path": "Forgot  Password",
+            "component": "forgotPasswowrdComponent"
+        },
+        {
+            "path": "''",
+            "redirectTo": "/sign-in",
+            "pathMatch": "full",
+            "default": true
+        },
+        {
+            "path": "**",
+            "component": "PageNotFoundComponent"
+        }
+    ]
+}

@@ -1,0 +1,44 @@
+<div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+  <header>
+    <h1 style="text-align:center;">
+      Audit Logs</h1>
+  </header>
+  <div fxLayout="column wrap" class="bg-grey" fxLayoutAlign="start stretch" [fxShow]="true">
+    <div fxLayout="column" class="bg-grey table">
+      <table mat-table [dataSource]="page?.tableData" matSort class="table-width-fix">
+        <tr mat-header-row *matHeaderRowDef="[&apos;name&apos;,&apos;surname&apos;,&apos;email&apos;,&apos;status&apos;,&apos;date | date&apos;,&apos;comeFrom&apos;]"></tr>
+        <tr mat-row *matRowDef="let row; columns: [&apos;name&apos;,&apos;surname&apos;,&apos;email&apos;,&apos;status&apos;,&apos;date | date&apos;,&apos;comeFrom&apos;];"></tr>
+
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header class="bg-grey">Name </th>
+          <td mat-cell *matCellDef="let table; let i = index;" class="bg-grey on-hover">{{table.name }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="surname">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header class="bg-grey">Surname</th>
+          <td mat-cell *matCellDef="let table; let i = index;" class="bg-grey">{{table.surname}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="email">
+          <th mat-header-cell *matHeaderCellDef class="bg-grey">Email</th>
+          <td mat-cell *matCellDef="let table; let i = index;" class="bg-grey">{{table.email}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="status">
+          <th mat-header-cell *matHeaderCellDef class="bg-grey">Status</th>
+          <td mat-cell *matCellDef="let table; let i = index;" class="bg-grey">{{table.status}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="date | date">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header class="bg-grey">Last update</th>
+          <td mat-cell *matCellDef="let table; let i = index;" class="on-hover bg-grey">{{table.date | date}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="comeFrom">
+          <th mat-header-cell *matHeaderCellDef class="bg-grey">From</th>
+          <td mat-cell *matCellDef="let table; let i = index;" class="bg-grey">{{table.comeFrom }}</td>
+        </ng-container>
+      </table>
+    </div>
+  </div>
+</div>

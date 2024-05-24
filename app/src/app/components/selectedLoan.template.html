@@ -1,0 +1,117 @@
+<div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+  <div fxLayout="column wrap" class="full-height" fxLayoutAlign="start stretch" [fxShow]="true">
+    <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" routerLink="/home/Loan management" onclick="sessionStorage.clear()">
+          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><mat-icon><span class="material-symbols-outlined"> chevron_left </span></mat-icon></div>
+          <div fxLayout="column wrap" class="on-hover" fxLayoutAlign="center stretch" [fxShow]="true">
+            <div>
+              Back</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <form #loanDetailsForm="ngForm">
+      <div fxLayout="column wrap" fxLayoutGap="0.5em" fxLayoutAlign="center center" [fxShow]="true">
+        <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div style="padding-bottom:10px" class="horizontal-line">
+            Loan Details</div>
+        </div>
+        <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="center space-between" [fxShow]="true">
+          <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+            <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+              <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                <div>
+                  First Name</div>
+              </div>
+              <div fxLayout="column wrap" class="input-container-selected" fxLayoutAlign="start stretch" [fxShow]="true">
+                <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                  <input matInput [(ngModel)]="page.userData.name" name="userData.name" placeholder="{{page.userData.name}}" [required]="false" readonly="true">
+
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+          <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+            <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+              <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                <div>
+                  Surname</div>
+              </div>
+              <div fxLayout="column wrap" class="input-container-selected" fxLayoutAlign="start stretch" [fxShow]="true">
+                <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                  <input matInput [(ngModel)]="page.userData.surname" name="userData.surname" placeholder="{{page.userData.surname}}" [required]="false" readonly="true">
+
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="center space-between" [fxShow]="true">
+          <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+            <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+              <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                <div>
+                  Email Address</div>
+              </div>
+              <div fxLayout="column wrap" class="input-container-selected" fxLayoutAlign="start stretch" [fxShow]="true">
+                <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                  <input matInput [(ngModel)]="page.userData.email" name="userData.email" placeholder="{{page.userData.email}}" [required]="false" readonly="true">
+
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+          <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+            <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+              <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                <div>
+                  Account Number</div>
+              </div>
+              <div fxLayout="column wrap" class="input-container-selected" fxLayoutAlign="start stretch" [fxShow]="true">
+                <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                  <input matInput [(ngModel)]="page.userData.AccountNo" name="userData.AccountNo" placeholder="{{page.userData.AccountNo}}" [required]="false" readonly="true">
+
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="center space-between" [fxShow]="true">
+          <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+            <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+              <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                <div>
+                  Loan Amount</div>
+              </div>
+              <div fxLayout="column wrap" class="input-container-selected" fxLayoutAlign="start stretch" [fxShow]="true">
+                <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                  <input matInput [(ngModel)]="page.userData. LoanAmount" name="userData. LoanAmount" placeholder="{{page.userData. LoanAmount}}" [required]="false" readonly="true">
+
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+          <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+            <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+              <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                <div>
+                  Status</div>
+              </div>
+              <div fxLayout="column wrap" class="input-container-selected" fxLayoutAlign="start stretch" [fxShow]="true"><mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;always&apos;">
+                  <mat-label></mat-label>
+                  <mat-select placeholder="{{page.userData.status}}" [(ngModel)]="page.userData.status" [required]="false" [ngModelOptions]="{standalone: true}">
+                    <ng-template ngFor let-option [ngForOf]="[&apos;approved&apos;, &apos;rejected&apos;,&apos;pending&apos;]" let-i="index">
+                      <mat-option [value]="option">{{option}}</mat-option>
+                    </ng-template>
+                  </mat-select>
+
+                </mat-form-field></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div fxLayout="column wrap" style="width: 425px; margin-left:395px; padding-top:10px" fxLayoutAlign="center stretch" [fxShow]="true"><button mat-raised-button (click)="update(loanDetailsForm)">Update</button></div>
+    </form>
+  </div>
+</div>
